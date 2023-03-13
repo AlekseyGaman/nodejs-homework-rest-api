@@ -28,10 +28,10 @@ const userSchema = new Schema(
       type: String,
       default: null,
     },
-    owner: {
-      //   type: SchemaTypes.ObjectId,
-      //   ref: "user",
-    },
+    // owner: {
+    //   //   type: SchemaTypes.ObjectId,
+    //   //   ref: "user",
+    // },
   },
   { versionKey: false, timestamps: true }
 );
@@ -48,7 +48,7 @@ const loginSchema = Joi.object({
   email: Joi.string().pattern(emailRegexp).required(),
 });
 
-const User = model("contact", userSchema);
+const User = model("user", userSchema);
 const schemas = { registerSchema, loginSchema };
 
 module.exports = { User, schemas };

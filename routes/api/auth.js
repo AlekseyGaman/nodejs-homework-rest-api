@@ -13,10 +13,10 @@ router.post(
   ctrl.register
 );
 
-router.post("/users/login");
+// router.post("/users/login");
 
-router.post("/users/logout");
+// router.post("/users/logout");
 
-router.post("/users/current");
+// router.post("/users/current");
 
 module.exports = router;
