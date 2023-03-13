@@ -7,16 +7,12 @@ const { schemas } = require("../../models/user");
 
 const router = express.Router();
 
-router.post(
-  "/users/register",
-  validateBody(schemas.registerSchema),
-  ctrl.register
-);
+router.post("/register", validateBody(schemas.registerSchema), ctrl.register);
 
-// router.post("/users/login");
+router.post("/login", validateBody(schemas.loginSchema), ctrl.login);
 
-// router.post("/users/logout");
+// router.post("/logout");
 
-// router.post("/users/current");
+// router.post("/current");
 
 module.exports = router;
